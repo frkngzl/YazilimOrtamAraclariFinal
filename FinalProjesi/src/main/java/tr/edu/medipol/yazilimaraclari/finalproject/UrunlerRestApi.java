@@ -12,5 +12,11 @@ public class UrunlerRestApi {
         return UrunDepo.urunleriGetir();
     }
     
+        @PostMapping("/ekle")
+    public Urun ekle(@RequestBody Urun urun) {
+    	UrunDepo.urunEkle(urun);
+    	return urun;
+    }
+    
     
 }
