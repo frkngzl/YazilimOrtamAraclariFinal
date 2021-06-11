@@ -1,0 +1,10 @@
+language: java
+
+script:
+    - "mvn -f FinalProjesi/pom.xml clean install cobertura:cobertura"
+
+jdk:
+    - openjdk8
+
+aftersuccess:
+    - bash <(curl -s https://codecov.io/bash) 
